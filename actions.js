@@ -7,10 +7,10 @@ var fn = {
                     navigator.geolocation.getCurrentPosition(fn.posicionObtenida,fn.error);
                     },
                     posicionObtenida: function(p){
-                  fn.dibujarMapa(p.coords.latitude,p.coords.latitude);      
+                  fn.dibujarMapa(p.coords.latitude,p.coords.longitude);      
                     },
                 error: function(err){
-                  alert(err.message)  
+                  alert(err.message);  
                     
                 },
                dibujarMapa: function(lat,lng){
