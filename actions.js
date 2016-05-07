@@ -1,7 +1,7 @@
 			var fn = {
                 ready: function(){
                     
-                  document.addEventListener(deviceready,fn.init,false);  
+                  document.addEventListener("deviceready",fn.init,false);  
                 },
                 init: function(){
                 //fn.dibujarMapa(19.060679, -98.201306);
@@ -10,6 +10,10 @@
                     posicionObtenida: function(p){
                   fn.dibujarMapa(p.coords.latitude,p.coords.latitude);      
                     },
+                error: function(err){
+                  alert(err.message)  
+                    
+                },
                     dibujarMapa: function(lat,lng){
 				//Posición del mapa
 				var latlng = new google.maps.LatLng(lat,lng);
@@ -25,6 +29,6 @@
 					map: map, 
 					title:"Mi posición"
 				});
-			},
+			}
 };
 $(fn.init);
