@@ -1,6 +1,5 @@
-			var fn = {
-                ready: function(){
-                    
+var fn = {
+                ready: function(){                    
                   document.addEventListener("deviceready",fn.init,false);  
                 },
                 init: function(){
@@ -14,7 +13,7 @@
                   alert(err.message)  
                     
                 },
-                    dibujarMapa: function(lat,lng){
+               dibujarMapa: function(lat,lng){
 				//Posición del mapa
 				var latlng = new google.maps.LatLng(lat,lng);
 				var myOptions = {
@@ -31,4 +30,4 @@
 				});
 			}
 };
-$(fn.init);
+$(fn.ready);
