@@ -18,7 +18,7 @@
         Orlando Vazquez
     </author>
 
-		
+<preference name="phonegap-version" value="3.7.0"/>		
         <gap:plugin name="org.apache.cordova.geolocation"/>
         
 </widget>
